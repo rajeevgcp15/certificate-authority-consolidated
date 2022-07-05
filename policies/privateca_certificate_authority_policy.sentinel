@@ -1,0 +1,70 @@
+import "tfstate-functions" as tfstate
+import "tfplan-functions" as plan
+import "strings"
+import "types"
+
+
+#Global Values
+ca_pool_tier_from_tfplan = {}		#Check google_privateca_ca_pool.tier value  “DEVOPS” or “ENTERPRISE”
+ca_pool_tier_from_tfstate = {}
+ca_pool_tier_merge_tfplan_tfstate = {}
+allowed_algorithms = ["RSA_PSS_2048_SHA256","RSA_PSS_3072_SHA256","RSA_PSS_4096_SHA256","RSA_PKCS1_2048_SHA256","RSA_PKCS1_3072_SHA256","RSA_PKCS1_4096_SHA256"]
+
+
+allPrivateCACertificateAuthorityInstances = plan.find_resources("google_privateca_certificate_authority")
+allPrivatecaCAPoolInstances = plan.find_resources("google_privateca_ca_pool")
+allCAPoolTfstateInstances = tfstate.find_resources("google_privateca_ca_pool")
+
+
+for allCAPoolTfstateInstances as address, rc {
+ capoolname = tfstate.evaluate_attribute(rc,"name")
+ capooltier = tfstate.evaluate_attribute(rc,"tier")
+ ca_pool_tier_from_tfstate[capoolname] = capooltier
+}
+
+print("-----Tfstate Map------")
+print(ca_pool_tier_from_tfstate)
+
+
+for allPrivatecaCAPoolInstances as address, rc {
+	ca_pool_tier_key = plan.evaluate_attribute(rc, "name")
+	ca_pool_tier_value = plan.evaluate_attribute(rc, "tier")
+	ca_pool_tier_from_tfplan[ca_pool_tier_key] = ca_pool_tier_value
+	print("ca_pool_tier details : ",ca_pool_tier_from_tfplan)
+}
+
+print("-----Tfplan Map------")
+print(ca_pool_tier_from_tfplan)
+
+#Merge both maps
+ca_pool_tier_merge_tfplan_tfstate = {}
+
+for ca_pool_tier_from_tfplan as address,rc {
+ca_pool_tier_merge_tfplan_tfstate[address] = rc
+}
+
+for ca_pool_tier_from_tfstate as address,rc {
+ca_pool_tier_merge_tfplan_tfstate[address] = rc
+}
+print("ca_pool_tier_merge_tfplan_tfstate",ca_pool_tier_merge_tfplan_tfstate)
+
+# Resource google_privateca_certificate_authority
+# google_privateca_certificate_authority.key_spec.algorithm				- Ensure that all CA’s in DEVOPS tier are using one of the recommended algorithms
+
+violations_ca_kms_algorithm   = {}
+for allPrivateCACertificateAuthorityInstances as address, rc {
+	#pool name that Certificate_Authority Instance is using 
+	ca_pool_name = plan.evaluate_attribute(rc, "pool")
+	if (not (types.type_of(ca_pool_tier_merge_tfplan_tfstate[ca_pool_name]) is "undefined")) and (ca_pool_tier_merge_tfplan_tfstate[ca_pool_name] == "DEVOPS") {
+		ca_private_kms_algorithm = plan.evaluate_attribute(rc, "key_spec.0.algorithm")
+		print("ca_private_kms_algorithm : ", ca_private_kms_algorithm)
+		if (ca_private_kms_algorithm not in allowed_algorithms or types.type_of(ca_private_kms_algorithm) is "undefined" or types.type_of(ca_private_kms_algorithm) is "null" or length(ca_private_kms_algorithm) == 0 ){
+			violations_ca_kms_algorithm[address] = rc
+			print("Allowed algorithm are", allowed_algorithms)
+		}
+	}
+			
+}
+GCP_CAS_CADEVOPSALG = rule { length(violations_ca_kms_algorithm) is 0 }
+
+main = rule { GCP_CAS_CADEVOPSALG }

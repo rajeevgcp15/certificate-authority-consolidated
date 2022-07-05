@@ -1,0 +1,364 @@
+{
+	"records": [
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/success_privateca_devopsalg/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-capool-label-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentcmek_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentalg_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_ca_pool_policy/failure_privateca_ca_pool_expression_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_naming_validation/ca-cacert-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_ca_pool_policy/success_privateca_ca_pool_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentcmek_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_protection_level_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_ver_temp_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentcmek_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/success_privateca_certificate_authority_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/success_privateca_certificate_authority_policy/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-cacert-label-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-capool-label-pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_naming_validation/ca-certauthority-pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentalg_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentalg_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-cacert-label-null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/failure_privateca_devopsalg_notvalidalg/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_ca_pool_policy/failure_privateca_ca_pool_issue_block_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-cacert-label-pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_naming_validation/ca-cacertauthority-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_naming_validation/ca-capool-pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_ca_pool_policy/null_privateca_ca_pool_expression_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentcmek_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-certauthority-label-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_invalid_bucket/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-certauthority-label-pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/failure_privateca_devopsalg_alg_notspecified/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentcmek_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-certauthority-label-null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_invalid_bucket/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentalg_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_ver_temp_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/failure_privateca_devopsalg_alg_empty/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentalg_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_protection_level_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/failure_privateca_devopsalg_alg_empty/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/failure_privateca_devopsalg_alg_notspecified/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/ca-gcs/gcp_cas_custombucket_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/tagging_gcp_validation/ca-capool-label-null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentcmek_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_naming_validation/ca-capool-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/success_privateca_devopsalg/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/assetmgmt_gcp_naming_validation/ca-cacert-pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_ca_pool_policy/null_privateca_ca_pool_issue_block_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/ca-selfsign/gcp_cas_caroothsm_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/privateca_certificate_authority_policy/failure_privateca_devopsalg_notvalidalg/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/ca-enterprise/gcp_cas_caentalg_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/05july22/ca-consolidated/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		}
+	]
+}

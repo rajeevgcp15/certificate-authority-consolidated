@@ -1,0 +1,97 @@
+# Import common-functions/tfplan-functions/tfplan-functions.sentinel
+# with alias "plan"
+import "tfstate-functions" as tfstate
+import "tfstate/v2" as tfstate2
+import "tfplan-functions" as plan
+import "strings"
+import "types"
+
+# Get all Composer Instances
+allCertAuthorityInstances = plan.find_resources("google_privateca_certificate_authority")
+allCryptoKeyTfplanInstances = plan.find_resources("google_kms_crypto_key")
+
+find_resources = func(type) {
+	resources = filter tfstate2.resources as address, r {
+		r.type is type
+	}
+
+	return resources
+}
+
+allCryptoKeyTfstateInstances = find_resources("google_kms_crypto_key")
+
+//print(allCryptoKeyTfstateInstances)
+
+array_tfstate_cryptokey = {}
+for allCryptoKeyTfstateInstances as address, rc {
+	cryptokeyname = tfstate.evaluate_attribute(rc, "name")
+	cryptokeyalgorithm = tfstate.evaluate_attribute(rc, "version_template.0.protection_level")
+	array_tfstate_cryptokey[cryptokeyname] = cryptokeyalgorithm
+}
+
+print(array_tfstate_cryptokey)
+
+array_tfplan_cryptokey = {}
+for allCryptoKeyTfplanInstances as address, rc {
+	crypto_plan_keyname = plan.evaluate_attribute(rc, "name")
+	crypto_plan_key_algorithm = plan.evaluate_attribute(rc, "version_template.0.protection_level")
+	array_tfplan_cryptokey[crypto_plan_keyname] = crypto_plan_key_algorithm
+}
+
+//print(allCryptoKeyTfplanInstances)
+print(array_tfplan_cryptokey)
+
+array_cryptokey_main = {}
+
+for array_tfstate_cryptokey as address, rc {
+	array_cryptokey_main[address] = rc
+}
+for array_tfplan_cryptokey as address, rc {
+	array_cryptokey_main[address] = rc
+}
+
+print(array_cryptokey_main)
+
+messages_selfsign = {}
+
+for allCertAuthorityInstances as address, rc {
+
+	ca_type = plan.evaluate_attribute(rc, "type")
+	print("ca_type:-->" + plan.to_string(ca_type))
+
+	if (ca_type == "SELF_SIGNED") {
+		kms_key_version = plan.evaluate_attribute(rc, "key_spec.0.cloud_kms_key_version")
+		print("kms-value-->" + plan.to_string(kms_key_version))
+		print("kms-key-version value--->" + types.type_of(kms_key_version))
+
+		if (kms_key_version == null) {
+			messages_selfsign[address] = rc
+			print("kms key version (key_spec.0.cloud_kms_key_version) is undefined for resource " + address)
+		} else {
+			cryptoKeyName = strings.split(kms_key_version, "/")
+			print(cryptoKeyName[7])
+			c_key_name = cryptoKeyName[7]
+			print(array_cryptokey_main[c_key_name])
+			x = array_cryptokey_main[c_key_name]
+			print(x)
+			is_x_undefined = rule { types.type_of(x) is "undefined" }
+			print("is x undefined--->" + plan.to_string(is_x_undefined))
+			if (is_x_undefined or x is null) {
+				print("The cryptokey resource: " + plan.to_string(c_key_name) + "  must have version_template block enabled with protection_level= HSM for resource " + address)
+				messages_selfsign[address] = rc
+			} else {
+				if not (x == "HSM") {
+					print("The cryptokey resource: " + plan.to_string(c_key_name) + "  Must have version_template block with protection_level= HSM for resource " + address)
+					messages_selfsign[address] = rc
+
+				}
+			}
+
+		}
+	}
+
+}
+
+GCP_CAS_CAROOTHSM = rule { length(messages_selfsign) is 0 }
+
+main = rule { GCP_CAS_CAROOTHSM }
