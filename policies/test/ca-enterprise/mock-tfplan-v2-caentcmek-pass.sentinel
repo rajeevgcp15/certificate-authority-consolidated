@@ -686,7 +686,7 @@ resource_changes = {
 				"timeouts":                      null,
 				"version_template": [
 					{
-						"algorithm":        "RSA_PSS_2048_SHA256",
+						"algorithm":        "RSA_SIGN_PSS_2048_SHA256",
 						"protection_level": "SOFTWARE",
 					},
 				],
